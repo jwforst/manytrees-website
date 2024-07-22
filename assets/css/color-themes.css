@@ -1,0 +1,213 @@
+/* ======= ======= ======= color theming  ======= ======= ======= */
+
+
+/* ===== ===== ===== color ramp block ===== ===== =====  */
+/* based on "Designing Systematic Colors" By Jeeyoung Jung
+Published in UX Planet March 27; 2018. See:
+https://uxplanet.org/designing-systematic-colors-b5d2605b15c
+
+Jung's article describes how to create a ten-increment color
+"ramp" (e.g., "color-ramp-blue") based on ten variations of
+saturation and lightness applied to a specific blue hue.
+This makes a blue color theme that can conform to WCAG 2.1
+level AA-compliance. Note that color ramps made the same way but
+using a different hue will have the same perceived contrast.
+*/
+
+.color-ramp-blue {
+  --blue10: hsl(215, 67%, 96%);
+  --blue20: hsl(217, 88%, 90%);
+  --blue30: hsl(217, 93%, 83%);
+  --blue40: hsl(217, 92%, 75%);
+  --blue50: hsl(217, 84%, 64%);
+  --blue60: hsl(217, 69%, 52%);
+  --blue70: hsl(217, 74%, 43%);
+  --blue80: hsl(217, 80%, 33%);
+  --blue90: hsl(217, 75%, 25%);
+  --blue100: hsl(218, 48%, 16%);
+}
+
+.color-ramp-bronze {
+  --bronze10: hwb(33 91% 1%);
+  --bronze20: hsl(33, 88%, 83%);
+  --bronze30: hsl(33, 86%, 71%);
+  --bronze40: hsl(33, 79%, 58%);
+  --bronze50: hsl(33, 85%, 44%);
+  --bronze60: hsl(33, 100%, 34%);
+  --bronze70: hsl(33, 96%, 28%);
+  --bronze80: hsl(33, 87%, 22%);
+  --bronze90: hsl(33, 75%, 17%);
+  --bronze100: hsl(32, 62%, 12%);
+}
+
+.color-ramp-dusk {
+  --dusk10: #f4f2f7;
+  --dusk20: #e3dcf7;
+  --dusk30: #cec2f0;
+  --dusk40: #b5a6e3;
+  --dusk50: #9886cf;
+  --dusk60: #7a68b3;
+  --dusk70: #645396;
+  --dusk80: #4f4178;
+  --dusk90: #3a3154;
+  --dusk100: #282436;
+}
+
+.color-ramp-gray {
+  --gray10: #f5f7fa;
+  --gray20: #ebeff5;
+  --gray30: #dde3ed;
+  --gray40: #c8d1e0;
+  --gray50: #afbacc;
+  --gray60: #8e99ab;
+  --gray70: #707a8a;
+  --gray80: #58606e;
+  --gray90: #434a54;
+  --gray100: #333840;
+}
+
+.color-ramp-green {
+  --green10: #e1faeb;
+  --green20: #abedc5;
+  --green30: #7ddba3;
+  --green40: #57c282;
+  --green50: #3ba164;
+  --green60: #2a854e;
+  --green70: #20693d;
+  --green80: #1a5230;
+  --green90: #153d25;
+  --green100: #112b1b;
+}
+
+.color-ramp-indigo {
+  --indigo10: #f2f2fc;
+  --indigo20: #dcdcfc;
+  --indigo30: #c2c2fc;
+  --indigo40: #a7a7fa;
+  --indigo50: #8585f2;
+  --indigo60: #6767e6;
+  --indigo70: #4d4dd1;
+  --indigo80: #3737b3;
+  --indigo90: #28288a;
+  --indigo100: #202057;
+}
+
+.color-ramp-magenta {
+  --magenta10: #faf0f4;
+  --magenta20: #fad4e4;
+  --magenta30: #fab4d1;
+  --magenta40: #f78bb8;
+  --magenta50: #ed5393;
+  --magenta60: #d6246e;
+  --magenta70: #b01355;
+  --magenta80: #8a1244;
+  --magenta90: #611535;
+  --magenta100: #421527;
+}
+
+.color-ramp-purple {
+  --purple10: #f5f0fa;
+  --purple20: #ead9fa;
+  --purple30: #dabcf7;
+  --purple40: #c79bf2;
+  --purple50: #ae74e8;
+  --purple60: #9656d6;
+  --purple70: #7d3cbd;
+  --purple80: #642b9e;
+  --purple90: #4b2175;
+  --purple100: #371c52;
+}
+
+.color-ramp-red {
+  --red10: #faf0f0;
+  --red20: #fad4d4;
+  --red30: #fab6b6;
+  --red40: #fa8e8e;
+  --red50: #f55353;
+  --red60: #de1b1b;
+  --red70: #b80d0d;
+  --red80: #8f0e0e;
+  --red90: #661414;
+  --red100: #451717;
+}
+
+.color-ramp-sky {
+  --sky10: #e8f4fa;
+  --sky20: #bbe5fa;
+  --sky30: #8dd4f7;
+  --sky40: #53baed;
+  --sky50: #229ad6;
+  --sky60: #0c7bb3;
+  --sky70: #066391;
+  --sky80: #064d70;
+  --sky90: #093952;
+  --sky100: #0c2938;
+}
+
+.color-ramp-slate {
+  --slate10: #edf4f7;
+  --slate20: #cbe3f5;
+  --slate30: #a7ceeb;
+  --slate40: #84b7db;
+  --slate50: #5e95bd;
+  --slate60: #48799c;
+  --slate70: #376180;
+  --slate80: #2d4d63;
+  --slate90: #243947;
+  --slate100: #1d2830;
+}
+
+.color-ramp-teal {
+  --teal10: hsl(177, 54%, 93%);
+  --teal20: hsl(177, 66%, 79%);
+  --teal30: hsl(176, 59%, 64%);
+  --teal40: hsl(176, 49%, 51%);
+  --teal50: hsl(176, 60%, 39%);
+  --teal60: hsl(176, 70%, 30%);
+  --teal70: hsl(176, 72%, 24%);
+  --teal80: hsl(176, 73%, 19%);
+  --teal90: hsl(176, 69%, 14%);
+  --teal100: hsl(176, 65%, 10%);
+}
+
+.color-ramp-bw {
+  --black: #1d1f24;
+  --white: #ffffff;
+}
+
+/* Transfer theme colors to layout elements */
+/* root */
+:root {
+  
+
+  --header-background: var(--color-background-b01);
+  --header-border: var(--color-border-b01);
+  --header-h1-h6: var(--color-h1-h6-b01);
+  --header-text: var(--color-text-b01);
+
+  --navbar-background: var(--color-background-b02);
+  --navbar-border: var(--color-border-b02);
+  --navbar-h1-h6: var(--color-h1-h6-b02);
+  --navbar-text: var(--color-text-b02);
+  --button-background: var(--color-button-b02);
+
+  --main-background: var(--color-background-b03);
+  --main-border: var(--color-border-b03);
+  --main-h1-h6: var(--color-h1-h6-b03);
+  --main-text: var(--color-text-b03);
+
+  --footer-background: var(--color-background-b01);
+  --footer-border: var(--color-border-b01);
+  --footer-h1-h6: var(--color-h1-h6-b01);
+  --footer-text: var(--color-text-b01);
+
+  --card-background-1: var(--color-background-a01);
+  --card-border-1: var(--color-border-a01);
+  --card-h1-h6-1: var(--color-h1-h6-a01);
+  --card-text-1: var(--color-text-a01);
+
+  /* creates a shadow-like blur */
+  /* shadow: h-offset, v-offset, blur, color */
+  --shadow-blur: 0px 0px 7px hsla(0, 0%, 0%, 0.5);
+  --shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+}

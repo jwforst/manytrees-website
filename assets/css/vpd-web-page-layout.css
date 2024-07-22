@@ -1,0 +1,234 @@
+/* This project uses the BEM CSS naming convention. */
+
+/* CSS Grid defines the basic layout in the body element. Flexbox defines responsive containers in the header, drawer, and footer elements. The basic layout grid includes:
+   header
+   navbar
+   main */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== ===== ===== body block  ===== ===== ===== */
+.body {
+  font-size: var(--root-font-size);
+  background-color: var(--navbar-background);
+  margin: 0 auto;
+}
+
+/* make a self-width-centered grid */
+.body--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1rem, 3rem, auto, 4rem;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "main"
+    "footer";
+  max-width: 1366px;
+  height: 100%;
+  box-shadow: var(--shadow-border);
+}
+
+/* ===== ===== ===== header block  ===== ===== ===== */
+.header {
+  z-index: 0;
+  grid-area: header;
+  min-height: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--header-background);
+  border-color: var(--header-border);
+}
+
+/* ===== ===== ===== navbar block  ===== ===== ===== */
+.navbar {
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  min-height: 1rem;
+  flex-wrap: wrap;
+  padding: 0rem;
+  background-color: var(--navbar-background);
+  border-color: var(--navbar-border);
+}
+
+nav a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-bottom-color: var(--navbar-background);
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
+  border-width: 0 0 1px 0;
+  color: var(--navbar-text);
+}
+
+/* mouse over link */
+nav a:hover {
+  color: gold;
+}
+
+/* selected link */
+nav a:active {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-bottom-color: gold;
+  color: gold;
+  background-color: var(--card-background-1);
+}
+
+/* ===== ===== ===== main block  ===== ===== ===== */
+.main {
+  z-index: 0;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding: 0rem;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 0px;
+  background-color: var(--main-background);
+  border-color: var(--main-border);
+}
+
+/* ===== ===== ===== footer block  ===== ===== ===== */
+.footer {
+  z-index: 0;
+  grid-area: footer;
+  justify-content: flex-end;
+  min-height: 3.5rem;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  overflow: hidden;
+  background-color: var(--footer-background);
+  border-color: var(--footer-border);
+}
+
+.footer--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "text-group"
+    "logo-group";
+}
+
+.footer__text-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: auto;
+  align-content: center;
+  margin: 3px;
+  padding: 1px 1px 1px 1px;
+}
+
+.footer__text {
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  margin: 3px;
+  padding: 0px 1px 3px 1px;
+  color: var(--footer-text);
+}
+
+.footer__logo-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 3px;
+  padding: 1px 1px 1px 1px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__logo {
+  align-self: center;
+  /* max-width: 140px;
+  max-height: 32px; */
+  max-width: 255px;
+  max-height: 44.1px;
+}
+
+/* ===== ===== ===== card-showcase block  ===== ===== ===== */
+.card-showcase {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-background-a01);
+  border: 1px solid var(--color-border-a01);
+  box-shadow: var(--shadow);
+}
+
+.card-showcase > * {
+  flex: 1 1 300px;
+}
+
+.card-showcase__image-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-showcase__image {
+  width: 100%;
+}
+
+.card-showcase__text-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== ===== ===== card wrapper  ===== ===== ===== */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem;
+  margin: 1rem;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-background-a03);
+}
+
+.card-wrapper > * {
+  /* flex-basis: 100%; */
+  flex: 1 1 400px;
+}
+
+.card-wrapper__text-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
+  padding: 0rem 1rem 0rem 0rem;
+
+  border-radius: 10px;
+  background-color: var(--color-background-a01);
+  border: 1px solid var(--color-border-a01);
+  box-shadow: var(--shadow);
+}
+
+/* ===== ===== ===== section block  ===== ===== ===== */
+
+.section {
+  margin: 0 0rem 0.75rem 0;
+  padding: 0px;
+  border: 1px solid var(--color-border-b01);
+}
+
+/* ===== ===== ===== media queries  ===== ===== ===== */
+@media (max-width: 994px) {
+}
